@@ -1,0 +1,31 @@
+
+.title-app{
+  text-align: center;
+  color: green;
+  margin-top: 5px;
+}
+.title{
+  color:green;
+  text-align:center
+}
+
+.empty-msg{
+  background-color: green;
+  color:white;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 2px;
+}
+.btn-info{
+  margin-left: 7px;
+}
+
+.disabledTask{
+  text-decoration: line-through;
+  font-style: italic;
+}
+
+.btn{
+  margin-bottom:10px;
+}

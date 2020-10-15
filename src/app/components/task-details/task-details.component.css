@@ -1,0 +1,28 @@
+.center{
+  text-align: center;
+}
+
+.title{
+  background-color: red;
+  color: white;
+  border-radius: 4px;
+}
+
+.completed{
+  background-color: green;
+  color: white;
+  border-radius: 4px;
+}
+
+.buttons{
+  display: flex;
+  gap: 15px;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.btn{
+  min-width: 200px;
+  margin-top: 20px;
+}
+

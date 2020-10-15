@@ -1,0 +1,17 @@
+<!--<div *ngIf="taskDetail" class="jumbotron mt-4">
+  <div class="col-sm-4 col-xs-6"><h2>ID: {{taskDetail.id}}</h2></div>
+  <div class="col-sm-4 col-xs-6"><h2>Titulo: {{taskDetail.title}}</h2></div>
+  <div class="col-sm-4 col-xs-6"><h2>Está completada: {{taskDetail.completed}}</h2></div>
+</div>-->
+
+<div  class="center jumbotron mt-4">
+  <h2 [ngClass]="{completed: taskDetail?.completed}" class="title">IDENTIFICADOR: {{taskDetail?.id}}</h2>
+  <h3>Titulo: {{taskDetail?.title}}</h3>
+  <h3>Está completada: {{taskDetail?.completed}}</h3>
+  <div class="buttons">
+    <button class="btn btn-success" (click)="changeStatus()">Completar</button>
+    <button class="btn btn-primary btn-list" routerLink="/home">Volver al listado</button>
+  </div>
+
+</div>
+

@@ -1,0 +1,23 @@
+<div class="container">
+  <h1 class="title-app">GESTOR DE TAREAS</h1>
+  <div class="jumbotron">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Nueva tarea</label>
+      <input [(ngModel)]="newTask.title" type="text" class="form-control mb-2">
+      <button (click)="addTask()" type="button" class="btn btn-success">Guardar</button>
+    </div>
+  </div>
+  <div class="jumbotron mt-4">
+    <h4 class="title">MIS TAREAS</h4>
+    <button [hidden]="tasks.length<=0" class="btn btn-success" (click)="hiddenTask()">{{hiddenButton}}</button>
+   <p *ngIf="tasks.length<=0" class="empty-msg"> BIEN!! HAS COMPLETADO TODAS TUS TAREAS.
+    </p>
+    <div class="form-group" *ngFor="let task of tasks" [hidden]=" task.completed==true && hid==true">
+      <input type="text" [(ngModel)]="task.title" class="form-control mb-2" [ngClass]="{disabledTask:task.completed}" readOnly>
+      <button (click)="editTask(task)" type="button" class="btn btn-secondary">Editar</button>
+      <button [routerLink]="['/tasks', task.id]" type="button" class="btn btn-info">Ver detalles</button>
+      <button (click)="deleteTask(task.id)" type="button" class="btn btn-danger ml-2">Borrar</button>
+
+    </div>
+  </div>
+</div>
